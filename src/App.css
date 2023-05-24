@@ -130,3 +130,13 @@ img{
   background-color: var(--color-three);
   border-radius: 25px;
 }
+
+.market-content-list{
+  font-family: 'Montserrat';
+  font-size: 23px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px 0 50px;
+}
