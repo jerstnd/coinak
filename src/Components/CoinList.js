@@ -18,7 +18,7 @@ function CoinList() {
     fetch()
   }, []);
 
-    function numberWithCommas(x) {
+  function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
   
@@ -27,7 +27,7 @@ function CoinList() {
       <div className='market-title'>Market Update</div>
       <div className='market-content'>
         <div className='market-content-title'>
-          <p>Coin</p>
+          <p className='coin-title'>Coin</p>
           <p>Price</p>
           <p>24h Change</p>
           <p>Market Cap</p>
@@ -35,18 +35,14 @@ function CoinList() {
         <div className='market-content-lists'>
           {data.map(data => (
             <div className='market-content-list'>
-            <p>{data.name}</p>
-            <p>{"$ " + data.current_price.toFixed(2)}</p>
-            <p className={
-                        "slider-coin__price " +
-                        (data.price_change_percentage_24h >= 0
-                          ? "green-text"
-                          : "red-text")
-                      }
-                    >
-                      {data.price_change_percentage_24h?.toFixed(2) + " %"}
-            </p>
-            <p>{"$ " + numberWithCommas(data.market_cap)}</p>
+              <span className='img-list'>
+                <img src={data.image} alt={data.name} style={{width: 25}} className='coin-imgs' /> {data.name}
+              </span>
+              <p className='prices'>{"$ " + data.current_price.toFixed(2)}</p>
+              <p className={"slider-coin__price " + (data.price_change_percentage_24h >= 0 ? "green-text" : "red-text")}>
+                {data.price_change_percentage_24h?.toFixed(2) + " %"}
+              </p>
+              <p className='market-cap'>{"$ " + numberWithCommas(data.market_cap)}</p>
             </div>
           ))}
         </div>
