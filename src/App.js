@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from './Components/Navbar';
 import Hero from './Components/Hero';
 import CoinList from './Components/CoinList'
+import Footer from './Components/Footer'
 
 function App() {
   
@@ -13,6 +14,9 @@ function App() {
     </div>
     <div className='market'>
     <CoinList />
+    </div>
+    <div className='footer'>
+    <Footer/>
     </div>
     </div>
   );

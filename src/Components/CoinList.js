@@ -5,7 +5,7 @@ function CoinList() {
   const [data, setData] = useState([])
   const [loading, setLoading] = useState(false)
   const [currentPage, setCurrentPage] = useState(1)
-  const [postsPerPage, setPostPerPage] = useState(10)
+
 
   useEffect(() => {
     const fetch = async () => {
@@ -21,10 +21,31 @@ function CoinList() {
   function numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
   }
+
+  const paginationButtons = [];
+  for (let i = 1; i <= 5; i++) {
+    paginationButtons.push(
+      <button
+        key={i}
+        onClick={() => setCurrentPage(i)}
+        className={i === currentPage ? "activePagi" : ""}
+      >
+        {i}
+      </button>
+    );
+  }
+
+  const scrollMarket = () => {
+    window.scrollTo({
+      top: window.pageYOffset - 800,
+      behavior: "smooth",
+    });
+  };
   
   return (
     <div>
       <div className='market-title'>Market Update</div>
+
       <div className='market-content'>
         <div className='market-content-title'>
           <p className='coin-title'>Coin</p>
@@ -32,6 +53,7 @@ function CoinList() {
           <p>24h Change</p>
           <p>Market Cap</p>
         </div>
+
         <div className='market-content-lists'>
           {data.map(data => (
             <div className='market-content-list'>
@@ -47,6 +69,11 @@ function CoinList() {
           ))}
         </div>
       </div>
+
+      <div onClick={scrollMarket} className="market-content__coin-list__pagination">
+        {paginationButtons}
+      </div>
+
     </div>
   )
 }

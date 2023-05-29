@@ -155,3 +155,24 @@ img{
 .red-text {
   color: red;
 }
+
+.market-content__coin-list__pagination{
+  margin: 20px 0 0 100px;
+}
+
+.footer{
+  height: 30vh;
+  background-color: var(--color-one);
+  color: #888;
+}
+
+.footer-content{
+  display: grid;
+  grid-template-columns: 400px 300px auto;
+  grid-column-gap: 30px;
+  margin: 0 100px 0 100px;
+}
+
+.footer-content-bot {
+  text-align: center;
+}
