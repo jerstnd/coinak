@@ -28,7 +28,12 @@
 
 .market {
   background-color: var(--color-two);
-  height: 150vh;
+  height: 125vh;
+}
+
+.about{
+  background-color: var(--color-two);
+  height: 100vh;
 }
 
 header {
@@ -176,3 +181,42 @@ img{
 .footer-content-bot {
   text-align: center;
 }
+
+.about-title {
+  font-family: 'Montserrat';
+  font-size: 40px;
+  font-weight: 600;
+  margin: 0 0 10px 100px;
+}
+
+.about-cards{
+  margin: 30px 100px 0 100px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-column-gap: 30px;
+}
+
+.about-card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(14px);
+  padding: 20px;
+}
+
+.about-card:hover{
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.about-button {
+  background-color: var(--color-four); /* Green */
+  border: none;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 20px;
+}
+
