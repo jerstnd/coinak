@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 function Navbar() {
   return (
@@ -11,7 +12,7 @@ function Navbar() {
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-            <a class="cta" href="#">Join</a>
+            <Link to={'/login'} style={{ textDecoration: 'none' }}><a class="cta" href="#">Join</a></Link>
         </header>
   )
 }
