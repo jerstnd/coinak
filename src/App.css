@@ -312,3 +312,106 @@ label {
 .btn-back-login:hover {
   box-shadow: 0px 1px 18px #24c64f;
 }
+
+.portfolio{
+  height: 100vh;
+  background-color: var(--color-one);
+}
+
+.add-trans {
+  font-family: 'Montserrat';
+  color: white;
+  background-color: #555;
+  height: 40px;
+  width: 200px;
+  margin-left: 70px ;
+  border-radius: 20px;
+}
+
+.portfolio-top{
+  margin-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.portfolio-bot{
+  margin-top: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.portofolio-box{
+  font-family: 'Montserrat';
+  color: white;
+  background-color: #555;
+  margin: 0 20px 5px 20px;
+  padding-top: 10px;
+  height: 70px;
+  border-radius: 25px;
+}
+
+.portfolio-boxbot{
+  font-family: 'Montserrat';
+  color: white;
+  background-color: #555;
+  margin: 0 20px 20px 20px;
+  padding-top: 10px;
+  height: 300px;
+  border-radius: 25px;
+}
+
+.logout {
+  font-family: 'Montserrat';
+  color: white;
+  background-color: #555;
+  height: 40px;
+  width: 200px;
+  border-radius: 20px;
+  position: absolute;
+  right: 70px;
+}
+
+.popup-box {
+  position: fixed;
+  background: #00000050;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+}
+ 
+.trans-box {
+  position: relative;
+  width: 70%;
+  margin: 0 auto;
+  height: auto;
+  max-height: 70vh;
+  margin-top: calc(100vh - 85vh - 20px);
+  background: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  border: 1px solid #999;
+  overflow: auto;
+}
+ 
+.close-icon {
+  content: 'x';
+  cursor: pointer;
+  position: fixed;
+  right: calc(15% - 30px);
+  top: calc(100vh - 85vh - 33px);
+  background: #ededed;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  line-height: 20px;
+  text-align: center;
+  border: 1px solid #999;
+  font-size: 20px;
+}

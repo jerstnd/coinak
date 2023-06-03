@@ -6,6 +6,7 @@ import HomeScreen from './Screens/HomeScreen';
 import LoginScreen from './Screens/LoginScreen';
 import RegisterScreen from './Screens/RegisterScreen'
 import PortfolioScreen from './Screens/PortfolioScreen'
+import PrivateRoutes from './util/PrivateRoutes'
 
 function App() {
   return (
@@ -15,7 +16,10 @@ function App() {
         <Route path='/' element={<HomeScreen />} />
         <Route path='/login' element={<LoginScreen />} />
         <Route path='/register' element={<RegisterScreen />} />
-        <Route path='/portfolio' element={<PortfolioScreen />} />
+        <Route path='/portfolio' element={
+            <PrivateRoutes>
+              <PortfolioScreen />
+            </PrivateRoutes>} />
       </Routes>
       </AuthProvider>
     </Router>

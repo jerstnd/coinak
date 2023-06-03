@@ -13,9 +13,9 @@ function RegisterScreen() {
       </div>
       <form method="post" className="form">
         <label for="user-email" style={{paddingTop:"13px"}}>
-            &nbsp;Email
+            &nbsp;Username
           </label>
-        <input id="user-email" className="form-content" type="email" name="email" autocomplete="on" required />
+        <input id="user-email" className="form-content" type="username" name="username" autocomplete="on" required />
         <div className="form-border"></div>
         <label for="user-password" style={{paddingTop:"22px"}}>&nbsp;Password
           </label>

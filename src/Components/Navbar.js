@@ -1,10 +1,13 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {Link} from 'react-router-dom'
+import AuthContext from '../context/AuthContext'
 
 function Navbar() {
+    let {user} = useContext(AuthContext)
+
   return (
       <header>
-            <div className='logo'><a href='#'>COINAK</a></div>
+            <div className='logo'><Link to={'/'} style={{ textDecoration: 'none' }}>COINAK</Link></div>
             <nav>
                 <ul class="nav__links">
                     <li><a href="#">Market</a></li>
@@ -12,7 +15,7 @@ function Navbar() {
                     <li><a href="#">Contact</a></li>
                 </ul>
             </nav>
-            <Link to={'/login'} style={{ textDecoration: 'none' }}><a class="cta" href="#">Join</a></Link>
+            {user ? <Link to={'/portfolio'} style={{ textDecoration: 'none' }}><a className="cta" href="#">Portfolio</a></Link>:<Link to={'/login'} style={{ textDecoration: 'none' }}><a className="cta" href="#">Join</a></Link>}
         </header>
   )
 }
