@@ -37,6 +37,23 @@ export const AuthProvider = ({children}) => {
         }
     }
 
+    let registerUser = async (e) => {
+        e.preventDefault()
+        let response = await fetch('http://127.0.0.1:8000/api/register/', {
+            method: 'POST',
+            headers:{
+                'Content-Type':'application/json'
+            },
+            body:JSON.stringify({'username':e.target.username.value, 'password':e.target.password.value, 'password2':e.target.password2.value})
+        })
+
+        if(response.status === 201){
+            navigate('/login')
+        }else{
+            alert('Something went wrong')
+        }
+    }
+
     let logoutUser = () => {
         setAuthToken(null)
         setUser(null)
@@ -45,7 +62,6 @@ export const AuthProvider = ({children}) => {
     }
 
     let updateToken = async (e) => {
-        console.log('UpdateToken called')
         let response = await fetch('http://127.0.0.1:8000/api/token/refresh/', {
             method: 'POST',
             headers:{
@@ -68,10 +84,10 @@ export const AuthProvider = ({children}) => {
         user:user,
         loginUser:loginUser,
         logoutUser:logoutUser,
+        registerUser:registerUser,
     }
 
     useEffect(()=> {
-
         let fourMinutes = 1000 * 60 * 4
         let interval = setInterval(() =>{
             if(authToken){
