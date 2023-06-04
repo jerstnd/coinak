@@ -6,7 +6,7 @@ function LoginScreen() {
   let {loginUser} = useContext(AuthContext)
   
   return (
-    <div>
+    <div className='login'>
       <Link to={"/"}><button className='btn-back-login'>Go Back</button></Link>
       <div id="card">
     <div id="card-content">

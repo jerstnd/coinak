@@ -12,8 +12,8 @@ function HomeScreen() {
         <Navbar />
         <Hero />
         </div>
+        <div className='about'><About /></div> 
         <div className='market'><CoinList /></div>
-        <div className='about'><About /></div>  
         <div className='footer'><Footer/></div>
     </div>
   )

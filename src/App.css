@@ -1,8 +1,9 @@
 :root {
-  --color-one:#27374D;
-  --color-two: #526D82;
-  --color-three: #9DB2BF;
-  --color-four: #DDE6ED;
+  --color-one:#18122B;
+  --color-two: #393053;
+  --color-three: #443C68;
+  --color-four: #635985;
+  --color-five: #FFFFFF;
 }
 
 ::-webkit-scrollbar {
@@ -22,17 +23,7 @@
 }
 
 .main {
-  background-image: linear-gradient(180deg,  var(--color-one) 0%, var(--color-two) 75%) ;
-  height: 100vh;
-}
-
-.market {
-  background-color: var(--color-two);
-  height: 125vh;
-}
-
-.about{
-  background-color: var(--color-two);
+  background-color: var(--color-one) ;
   height: 100vh;
 }
 
@@ -45,7 +36,7 @@ header {
 
 .logo a {
   text-decoration: none;
-  color: var(--color-four);
+  color: var(--color-five);
   font-weight: 800;
   font-size: large;
 }
@@ -54,7 +45,7 @@ header {
 .cta,
 .overlay__content a {
   font-family: "Montserrat", sans-serif;
-  color: var(--color-four);
+  color: var(--color-five);
   text-decoration: none;
   font-weight: 600;
 }
@@ -73,12 +64,12 @@ header {
 }
 
 .nav__links li a:hover {
-  color: #0088a9;
+  opacity: 0.5;
 }
 
 .cta {
   padding: 9px 25px;
-  background-color: rgba(0, 136, 169, 1);
+  background-color: var(--color-four);
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -86,30 +77,51 @@ header {
 }
 
 .cta:hover {
-  background-color: rgba(0, 136, 169, 0.8);
+  background-color: var(--color-four);
+  opacity: 0.5;
 }
 
 .hero h1 {
+  margin-top: 100px;
+  margin-bottom: 40px;
   text-align: center;
-  font-size: 100px;
-  color: var(--color-four);
-}
-
-.img-hero {
-  text-align: center;
-}
-
-img{
-  margin-left: 15px;
-  margin-right: 15px;
-  width: 100px;
+  font-size: 96px;
+  color: var(--color-five);
 }
 
 .crypto-text{
   text-transform: uppercase;
-  background: linear-gradient(to right, #643843 0%, #99627A 100%);
+  background: linear-gradient(to right, var(--color-four) 0% ,var(--color-five) 25%, var(--color-four) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.hero-btn-cont{
+  display: flex;
+  justify-content: center;
+}
+
+.hero-btn{
+  font-weight: 600;
+  font-size: 25px;
+  text-decoration: none;
+  color: var(--color-five);
+  background-color: var(--color-four);
+  padding: 9px 25px;
+  width: 150px;
+  height: 30px;
+  text-align: center;
+  border-radius: 25px;
+}
+
+.hero-btn:hover {
+  opacity: 0.5;
+}
+
+.market {
+  background-color: var(--color-one);
+  height: 125vh;
+  color: var(--color-five);
 }
 
 .market-title{
@@ -137,7 +149,6 @@ img{
 .coin-title{
   padding-left: 20px;
 }
-
 
 .market-content-list {
   display: grid;
@@ -167,8 +178,8 @@ img{
 
 .footer{
   height: 30vh;
-  background-color: var(--color-one);
-  color: #888;
+  background-color: #2A2831;
+  color:#888;
 }
 
 .footer-content{
@@ -182,15 +193,23 @@ img{
   text-align: center;
 }
 
+.about{
+  background-color: var(--color-one);
+  height: 100vh;
+  padding: 0 10% 0 10%;
+}
+
 .about-title {
+  color: var(--color-five);
   font-family: 'Montserrat';
-  font-size: 40px;
+  font-size: 36px;
   font-weight: 600;
-  margin: 0 0 10px 100px;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: end;
 }
 
 .about-cards{
-  margin: 30px 100px 0 100px;
   text-align: center;
   display: grid;
   grid-template-columns: auto auto auto;
@@ -198,14 +217,16 @@ img{
 }
 
 .about-card{
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  color: var(--color-five);
+  box-shadow: 0 0 50px 0 rgba(0,0,0,0.5);
   border-radius: 10px;
-  backdrop-filter: blur(14px);
+  background-color: var(--color-two);
   padding: 20px;
 }
 
 .about-card:hover{
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  box-shadow: 0 0 50px 0px rgba(0,0,0,1);
+  opacity: 0.9;
 }
 
 .about-button {
@@ -220,19 +241,27 @@ img{
   border-radius: 20px;
 }
 
-label {
-  font-family: "Raleway", sans-serif;
-  font-size: 11pt;
+.login{
+  background-color: var(--color-one);
+  height: 100vh;
 }
+
+label {
+  font-family: "Monserrat", sans-serif;
+  font-size: 11pt;
+  color: var(--color-five);
+}
+
 #forgot-pass {
-  color: #2dbd6e;
-  font-family: "Raleway", sans-serif;
+  color: var(--color-five);
+  font-family: "Montserrat", sans-serif;
   font-size: 10pt;
   margin-top: 3px;
   text-align: right;
 }
+
 #card {
-  background: #fbfbfb;
+  background: var(--color-four);
   border-radius: 8px;
   box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.65);
   height: 410px;
@@ -243,24 +272,25 @@ label {
   padding: 12px 44px;
 }
 #card-title {
-  font-family: "Raleway Thin", sans-serif;
+  font-family: "Montserrat", sans-serif;
   letter-spacing: 4px;
   padding-bottom: 23px;
   padding-top: 13px;
   text-align: center;
+  color: var(--color-five);
 }
 #signup {
-  color: #2dbd6e;
-  font-family: "Raleway", sans-serif;
+  color: var(--color-five);
+  font-family: "Montserrat", sans-serif;
   font-size: 10pt;
   margin-top: 16px;
   text-align: center;
 }
 #submit-btn {
-  background: -webkit-linear-gradient(right, #a6f77b, #2dbd6e);
+  background-color: var(--color-three);
   border: none;
   border-radius: 21px;
-  box-shadow: 0px 1px 8px #24c64f;
+  box-shadow: 0px 0px 30px 0 rgba(0,0,0,0.3);
   cursor: pointer;
   color: white;
   font-family: "Raleway SemiBold", sans-serif;
@@ -271,7 +301,7 @@ label {
   width: 153px;
 }
 #submit-btn:hover {
-  box-shadow: 0px 1px 18px #24c64f;
+  box-shadow: 0px 0px 10px 0 rgba(0,0,0,0.4);
 }
 .form {
   align-items: left;
@@ -279,7 +309,7 @@ label {
   flex-direction: column;
 }
 .form-border {
-  background: -webkit-linear-gradient(right, #a6f77b, #2ec06f);
+  background-color: var(--color-one);
   height: 1px;
   width: 100%;
 }
@@ -290,15 +320,17 @@ label {
   padding-top: 14px;
 }
 .underline-title {
-  background: -webkit-linear-gradient(right, #a6f77b, #2ec06f);
+  background: var(--color-one);
   height: 2px;
   margin: -1.1rem auto 0 auto;
   width: 89px;
 }
 
 .btn-back-login {
+  font-family: 'Montserrat';
+  font-weight: 600;
   margin: 30px;
-  background-color: #4CAF50;
+  background-color: var(--color-four);
   border: none;
   border-radius: 21px;
   color: white;
@@ -307,10 +339,14 @@ label {
   text-decoration: none;
   font-size: 16px;
   cursor: pointer;
-  box-shadow: 0px 1px 8px #24c64f;
 }
 .btn-back-login:hover {
-  box-shadow: 0px 1px 18px #24c64f;
+  box-shadow: 0px 1px 18px black;
+}
+
+.register{
+  background-color: var(--color-one);
+  height: 100vh;
 }
 
 .portfolio{
@@ -321,7 +357,7 @@ label {
 .add-trans {
   font-family: 'Montserrat';
   color: white;
-  background-color: #555;
+  background-color: var(--color-four);
   height: 40px;
   width: 200px;
   margin-left: 70px ;
@@ -349,7 +385,7 @@ label {
 .portofolio-box{
   font-family: 'Montserrat';
   color: white;
-  background-color: #555;
+  background-color: var(--color-three);
   margin: 0 20px 5px 20px;
   padding-top: 10px;
   height: 70px;
@@ -359,7 +395,7 @@ label {
 .portfolio-boxbot{
   font-family: 'Montserrat';
   color: white;
-  background-color: #555;
+  background-color: var(--color-three);
   margin: 0 20px 20px 20px;
   padding-top: 10px;
   height: 300px;
@@ -369,7 +405,7 @@ label {
 .logout {
   font-family: 'Montserrat';
   color: white;
-  background-color: #555;
+  background-color: var(--color-three);
   height: 40px;
   width: 200px;
   border-radius: 20px;

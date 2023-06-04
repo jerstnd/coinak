@@ -3,8 +3,8 @@ import {Link} from 'react-router-dom'
 
 function RegisterScreen() {
   return (
-    <div>
-        <Link to={"/login"}><button className='btn-back-login'>Go Back</button></Link>
+    <div className='register'>
+    <Link to={"/login"}><button className='btn-back-login'>Go Back</button></Link>
     <div id="card">
     <div id="card-content">
       <div id="card-title">
