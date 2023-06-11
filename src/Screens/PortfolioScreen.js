@@ -18,7 +18,7 @@ function PortfolioScreen() {
     <div className='portfolio'>
       <Navbar />
       <button className='add-trans' onClick={togglePopup}>Add transactions</button>
-      {isOpen && <AddTransaction handleClose={togglePopup} /> }
+      {isOpen && <AddTransaction toggle={togglePopup} /> }
 
       <div className='portfolio-top'>
         <div className='portofolio-box'>COST</div>
